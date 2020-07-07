@@ -9,47 +9,7 @@
 # TASK 3: Improve it by giving them 5 tries to get it right before failing
 #           *** Do not use the exit command, and do not use a loop (e.g. while or for)
 
-login="Login Successful."
-nop="Username Or Password is Incorrect.."
-referenceString="Password" #here storing password into variable named referenceString .
-read -s -p "Give login input:" myString #here, using myString for saving password and getting an input from user.
-echo
-#here,  using the $referenceString for checking that input is valid or not .
-if [ $myString = $referenceString ]; then
-  echo "$login"
-  echo
-else
-  echo "$nop"
-  read -s -p "Give login input:" myString
-  if [ $myString = $referenceString ]; then
-    echo "$login"
-    echo
-  else
-    echo
-    echo "$nop"
-    read -s -p "Give login input:" myString
-  if [ $myString = $referenceString ]; then
-    echo "$login"
-    echo
-  else
-    echo
-    echo "$nop"
-    read -s -p "Give login input:" myString
-  if [ $myString = $referenceString ]; then
-    echo "$login"
-    echo
-  else
-    echo
-    echo "$nop"
-    read -s -p "Give login input:" myString
-  if [ $myString = $referenceString ]; then
-    echo "$login"
-    echo
-  else
-    echo
-    echo "$nop Better Luck next time."
-fi
-fi
-fi
-fi
-fi
+myString="TestString"
+referenceString="password"
+
+[ $myString = $referenceString ] && echo "Correct!" || echo "Incorrect."
