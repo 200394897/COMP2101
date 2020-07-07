@@ -17,33 +17,15 @@
 ###############
 # Variables   #
 ###############
-usernam="$USER" #here we are using variable named environment  for getting an username.
-hostname="$(hostname)" # here we are using variable named environment  forgetting a hostname.
-day=$(date +%A) # here we are using a date command for exact day.
-currenttime=$(date +%I:%M\ %p) #here we are using a date command exact date
+title="Overlord"
+myname="dennis"
+hostname="myhostname"
+
 ###############
 # Main        #
 ###############
-# here we are using if else command for exact day and also printing a massage related to exact day.
-if [ "$day" = Monday ];
-then
-csay="Welcome to planet $hostname, network associate $usernam!"
-elif [ "$day" = Tuesday ];
-then
-csay="Welcome to planet $hostname, sadest person $usernam!"
-elif [ "$day" = Wednesday ];
-then
-csay="Welcome to planet $hostname, director $usernam!"
-elif [ "$day" = Thursday ];
-then
-csay="Welcome to planet $hostname, scripting expert $usernam!"
-elif [ "$day" = Friday ];
-then
-csay="Welcome to planet $hostname, android developer $usernam!"
-elif [ "$day" = Saturday ];
-then
-csay="Welcome to planet $hostname, innocent $usernam!"
-else
-csay="Welcome to planet $hostname, coww $usernam!"
-fi
-cowsay "$csay It is $currenttime on $day ."
+cat <<EOF
+
+Welcome to planet $hostname, "$title $myname!"
+
+EOF
